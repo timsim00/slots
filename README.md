@@ -12,8 +12,7 @@ This is currently being used in an experimental, framework-less, build-less, laz
 - mutate(action, payload)
 - subscribe(listener)
 - notify(namespace)
-- import({namespace, actions,
-- initState, mutators, notify})
+- import({namespace, actions, initState, mutators, notify})
 
 
 # Usage
