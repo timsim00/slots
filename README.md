@@ -1,4 +1,6 @@
-Feedback welcome.  This is currently being used in an experimental, framework-less, build-less, micro-frontend-y app.
+Feedback welcome.  
+
+This is currently being used in an experimental, framework-less, build-less, lazily-loaded micro-frontend-y, web component and module-only app.
 
 
 # API
