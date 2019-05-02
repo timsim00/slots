@@ -57,7 +57,8 @@ get mutators() {
 
 get initState() {
   return {
-    orgName: 'mystuff.com'
+    orgName: 'mystuff.com',
+    stuff: {}
   }
 }
 ```
