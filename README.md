@@ -13,12 +13,15 @@ import({namespace, actions, initState, mutators, notify})
 
 # Usage
 
+```javascript
 // instantiate Slots somehow:
 module.default.prototype.createStore = (actions, mutators, subscribers, initialState = {}, notify, namespace, debug) => {
   return new Slots(actions, mutators, subscribers, initialState, notify, namespace, debug)
 }
+```
 
-## /* app-root component */
+```javascript
+/* app-root component */
 connectedCallback() {
   ...
   const {actions, mutators, initState} = this
@@ -52,12 +55,12 @@ get initState() {
     orgName: 'mystuff.com'
   }
 }
+```
 
 
 
-
-
-## /* some other module */
+```javascript
+/* some other module */
 
 constructor() {
   this.app = document.querySelector('app-root')
@@ -105,3 +108,4 @@ get initState() {
     otherStuff: []
   }
 }
+```
