@@ -36,7 +36,7 @@ connectedCallback() {
 get actions() {
   return {
     MY_ACTION: ({mutate, dispatch}, data) => {
-      mutate('app:SHOW_VIEW', data) // just passing through
+      mutate('app:MY_ACTION', data) // just passing through
     }
   }
 }
