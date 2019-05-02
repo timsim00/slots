@@ -4,6 +4,9 @@ Tiny, uni-directional, central state management in 70 lines of code.
 
 This is currently being used in an experimental, framework-less, build-less, lazily-loaded micro-frontend-y, web component and module-only app.  It's working well.
 
+Reason for being: https://bundlephobia.com/result?p=vuex@3.1.0
+Why download 3k when you only need 800b?
+
 
 # API
 
@@ -115,4 +118,11 @@ get initState() {
     otherStuff: []
   }
 }
+```
+
+```javascript
+// dispatch actions from some module, usually actions defined w/in the same module or related component:
+this.store = document.querySelector('app-root').store
+...
+this.store.dispatch('other:OTHER_ACTION')
 ```
