@@ -39,7 +39,7 @@ connectedCallback() {
 
 get actions() {
   return {
-    MY_ACTION: ({mutate, dispatch}, data) => {
+    MY_ACTION: ({mutate}, data) => {
       mutate('app:MY_ACTION', data) // just passing through
     }
   }
@@ -88,8 +88,10 @@ get namespace() {
 
 get actions() {
   return {
-    OTHER_ACTION: ({mutate}, term) => {
-      let data = {...}
+    OTHER_ACTION: ({mutate, dispatch}, term) => {
+      const data = {...}
+      const someData = {...}
+      dispatch('someNamespace:SOME_ACTION', someData)
       this.app.apiRequest(data)
       .then( res => {
         mutate('other:OTHER_ACTION', res)
