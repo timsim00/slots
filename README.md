@@ -3,12 +3,13 @@ Feedback welcome.  This is currently being used in an experimental, framework-le
 
 # API
 
-constructor({actions, mutators, subscribers, initState, notify, namespace, debug})
-dispatch(action, payload)
-mutate(action, payload)
-subscribe(listener)
-notify(namespace)
-import({namespace, actions, initState, mutators, notify})
+- constructor({actions, mutators, subscribers, initState, notify, namespace, debug})
+- dispatch(action, payload)
+- mutate(action, payload)
+- subscribe(listener)
+- notify(namespace)
+- import({namespace, actions,
+- initState, mutators, notify})
 
 
 # Usage
