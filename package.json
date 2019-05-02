@@ -1,0 +1,26 @@
+{
+  "name": "slots",
+  "version": "1.0.0",
+  "description": "Tiny state management inspired by Vuex and React",
+  "main": "slots.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timsim00/slots.git"
+  },
+  "keywords": [
+    "javascript",
+    "state",
+    "management",
+    "vuex",
+    "react"
+  ],
+  "author": "Drew Simmons",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/timsim00/slots/issues"
+  },
+  "homepage": "https://github.com/timsim00/slots#readme"
+}
