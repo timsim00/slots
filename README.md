@@ -1,6 +1,8 @@
-Feedback welcome.  
+Feedback and questions welcome.  
 
-This is currently being used in an experimental, framework-less, build-less, lazily-loaded micro-frontend-y, web component and module-only app.
+Tiny, uni-directional, central state management in 70 lines of code.
+
+This is currently being used in an experimental, framework-less, build-less, lazily-loaded micro-frontend-y, web component and module-only app.  It's working well.
 
 
 # API
