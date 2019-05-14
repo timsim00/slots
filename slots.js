@@ -1,11 +1,12 @@
 class Slots { //nickname for a vending machine
   // TODO: make reactive?, https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy
-  constructor({actions, mutators, subscribers, initState, notify, namespace, debug}) {
+  constructor({actions, mutators, subscribers, initState, notify, namespace, debug = false, quiet = false}) {
     this.actions = {}
     this.mutators = {}
     this.subscribers = subscribers || []
     this.state = {}
-    this.debug = debug || false
+    this.debug = debug
+    this.quiet = quiet
     this.import({actions, mutators, initState, notify, namespace})
   }
   dispatch(action, payload) {
@@ -26,7 +27,7 @@ class Slots { //nickname for a vending machine
     } else {
       this.state = this.mutators[action](this.state, payload)
     }
-    this.notify(parts[0])
+    !this.quiet && this.notify(parts[0])
   }
   subscribe(listener) {
     // TODO: subscribe to only a namespace
@@ -36,7 +37,8 @@ class Slots { //nickname for a vending machine
     }
   }
   notify(namespace) {
-    this.subscribers.forEach(subscriber => subscriber(this.state, namespace))
+    if (this.debug) {console.log(`notify ${namespace || ''} ${this.quiet}`)}
+    !this.quiet && this.subscribers.forEach(subscriber => subscriber(this.state, namespace))
   }
   import({namespace, actions, initState, mutators, notify}) {
     if (namespace && !this.state.hasOwnProperty(namespace)) {
